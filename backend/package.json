@@ -1,0 +1,37 @@
+{
+  "name": "mycdars-backend",
+  "version": "1.0.0",
+  "description": "Muhanga Youth Daily Attendance Records Control",
+  "keywords": [
+    "Muhanga",
+    "Youth",
+    "System"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "Null"
+  },
+  "license": "ISC",
+  "author": "parfaituwayo@gmail.com",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "dev": "node main.js",
+    "test": "node test.js"
+  },
+
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "express-cookie": "^4.17.1",
+    "express-session": "^1.18.2",
+    "express-ws": "^5.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.20.0",
+    "nodemailer": "^7.0.9",
+    "socket.io": "^4.8.1"
+
+  }
+}

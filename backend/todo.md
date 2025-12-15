@@ -1,0 +1,1 @@
+- check if standard account not closed when sending request in a middleware.
