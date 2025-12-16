@@ -1,0 +1,53 @@
+/* Make the header draggable for frameless Electron window */
+.app-header {
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Interactive elements must be non-draggable so clicks work */
+.app-header .no-drag {
+  -webkit-app-region: no-drag;
+}
+
+/* Ensure the window control buttons are clickable */
+.linux-like-min-max-close-buttons.no-drag,
+.linux-like-min-max-close-buttons.no-drag > div {
+  -webkit-app-region: no-drag;
+}
+
+/* Cursor affordance for interactive elements */
+.no-drag { cursor: pointer; }
+
+/* Mac-style traffic light window controls */
+.mac-window-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 6px 10px;
+}
+.mac-btn {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12) inset;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mac-btn:hover { transform: translateY(-1px); box-shadow: 0 3px 6px rgba(0,0,0,0.12); }
+.mac-close { background: #ff5f57; }
+.mac-minimize { background: #ffbd2e; }
+.mac-maximize { background: #28c940; }
+.mac-btn svg { display: block; width: 10px; height: 10px; }
+
+/* Slight spacing to align header content when mac controls exist */
+.app-header { display: flex; align-items: center; justify-content: space-between; padding-right: 10px; }
+.header-left { display: flex; align-items: center; gap: 0px; padding-left: 0px; }
+.header-left pre { margin: 0; font-weight: 700; letter-spacing: 1px; }
+
+/* Linux-like controls on the left (icon buttons) */
+.mac-window-controls.right-controls { padding-right: 13px; }
+
+
